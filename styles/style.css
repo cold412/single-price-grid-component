@@ -34,46 +34,44 @@ The designs were created to the following widths:
 /* ### Primary */
 /* ### Neutral */
 .topCont {
-  padding: 3vh;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: top;
+  background-color: white;
+  padding: 4vh;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
 
 .topCont h1 {
-  color: #2ab2af;
+  color: #249e9c;
   padding-bottom: 1.5rem;
 }
 
 .topCont h2 {
   color: #c0df34;
+  padding-bottom: 1rem;
 }
 
 .topCont h3 {
   color: #98a6bd;
-  font-size: 1rem;
-  padding-top: 1rem;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.topCont #space {
+  padding-bottom: 0.5rem;
 }
 
 /* ### Primary */
 /* ### Neutral */
-.bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-items: center;
-}
-
 .left {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: left;
   background-color: #249e9c;
-  width: 100vh;
-  padding: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  padding: 4vh;
   color: white;
   border-bottom-left-radius: 0.5rem;
 }
@@ -82,45 +80,12 @@ The designs were created to the following widths:
   font-size: 1.5rem;
 }
 
-.button {
-  background-color: #c0df34;
-  text-align: center;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  margin-top: rem;
-}
-
-.price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 1rem;
-}
-
-.price p {
-  padding-left: 1rem;
-}
-
-.full {
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-  text-align: left;
-}
-
 .right {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: right;
   background-color: #2ab2af;
-  width: 100vh;
-  padding: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  padding: 4vh;
   color: white;
   border-bottom-right-radius: 0.5rem;
 }
@@ -131,13 +96,45 @@ The designs were created to the following widths:
 
 .right p {
   padding-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.full {
+  padding-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2rem;
+}
+
+.price p {
+  padding-left: 1rem;
+  color: #98a6bd;
+  font-size: 1.5rem;
+}
+
+.button {
+  background-color: #c0df34;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
 }
 
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   font-family: 'Karla', sans-serif;
 }
 
@@ -146,15 +143,30 @@ body {
 }
 
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: white;
-  margin: 15vh;
-  border-radius: 0.5rem;
+  display: -ms-grid;
+  display: grid;
+  margin: 10vh;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 2fr;
+      grid-template-rows: 2fr;
+      grid-template-areas: 'top top' 'left right';
+}
+
+@media only screen and (max-width: 580px) {
+  .container {
+    margin: 2vh;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 'top' 'left' 'right';
+  }
+  .left {
+    border-radius: 0rem;
+  }
+  .right {
+    border-bottom-left-radius: 0.5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

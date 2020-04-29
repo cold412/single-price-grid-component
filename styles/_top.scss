@@ -2,23 +2,25 @@
 
 
 .topCont {
-    padding: 3vh;
+    grid-area: top;
+    background-color: white;
+    padding: 4vh;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-
-    h1{
-        color: $Cyan;
+    h1 {
+        color: $Cyan2;
         padding-bottom: 1.5rem;
     }
-    h2{
+    h2 {
         color: $BrightYellow;
+        padding-bottom: 1rem;
     }
     h3 {
         color: $GrayishBlue;
-        font-size: 1rem;
-        padding-top: 1rem;
+        font-weight: 400;
+        font-size: 1.3rem;
     }
-    
+    #space {
+       padding-bottom: 0.5rem;
+    }
 }
-
-

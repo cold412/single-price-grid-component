@@ -36,7 +36,6 @@ The designs were created to the following widths:
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Karla', sans-serif;
 }
 
@@ -45,9 +44,32 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    margin: 15vh;
-    border-radius: 0.5rem;
+    display: grid;
+    margin: 10vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr;
+    grid-template-areas:  'top top'
+                          'left right';
 }
+
+
+@media only screen and (max-width: 580px) {
+
+    .container{
+        margin: 2vh;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr;
+    grid-template-areas:  'top'
+                          'left'
+                          'right';
+
+    }
+
+
+    .left {
+        border-radius: 0rem;
+    }
+    .right {
+        border-bottom-left-radius: 0.5rem;
+    }
+  }
