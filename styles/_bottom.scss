@@ -1,0 +1,67 @@
+@import 'variables';
+
+.bottom {
+    display: flex;
+    justify-items: center;
+}
+
+
+.left {
+    background-color: $Cyan2;
+    width: 100vh;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border-bottom-left-radius: 0.5rem;
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+.button {
+    background-color: $BrightYellow;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: rem;
+}
+
+
+.price {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    p{
+        padding-left: 1rem;
+    }
+
+    
+}
+
+
+.full {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    text-align: left;
+}
+
+
+
+
+
+.right {
+    background-color: $Cyan;
+    width: 100vh;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border-bottom-right-radius: 0.5rem;
+    h3 {
+        font-size: 1.5rem;
+    }
+    p {
+        padding-top: 2rem;
+    }
+}

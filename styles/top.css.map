@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,iBAAiB;AAKjB,iBAAiB;ADDjB,AAAA,IAAI,CAAC;EACD,gBAAgB,EAAE,GAAG;CAIxB;;AALD,AAEI,IAFA,CAEA,EAAE,CAAA;EACE,KAAK,EAAE,KAAK;CACf",
+    "sources": [
+        "top.scss",
+        "variables.scss"
+    ],
+    "names": [],
+    "file": "top.css"
+}

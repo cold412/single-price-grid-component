@@ -1,0 +1,24 @@
+@import 'variables';
+
+
+.topCont {
+    padding: 3vh;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+
+    h1{
+        color: $Cyan;
+        padding-bottom: 1.5rem;
+    }
+    h2{
+        color: $BrightYellow;
+    }
+    h3 {
+        color: $GrayishBlue;
+        font-size: 1rem;
+        padding-top: 1rem;
+    }
+    
+}
+
+
